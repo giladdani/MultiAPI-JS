@@ -21,6 +21,20 @@ app.get('/api/imdb/topgames', async(req, res) => {
     res.send(topGamesList)
 })
 
+app.get('/api/metacritic/topgames', async(req, res) => {
+    const response = await axios.get(consts.METACRITIC_TOP_GAMES_LIST_URL)
+    const html = response.data
+    const $ = cheerio.load(html)
+    const topGamesList = []
+    $('td.clamp-summary-wrap a h3', html).map((i, elem) => {
+        topGamesList.push({
+            "title": elem.children[0].data,
+            "rank": i+1
+        })
+    })
+    res.send(topGamesList)
+})
+
 app.listen(1111, () => {
     console.log('listening on port 1111');
 })
