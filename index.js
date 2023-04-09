@@ -2,12 +2,15 @@ import express from 'express';
 import axios from 'axios'
 import cheerio from 'cheerio'
 import consts from './consts.js'
+import cors from 'cors';
 // const consts = require('./consts')
 // const axios = require('axios')
 // const express = require('express')
 // const cheerio = require('cheerio')
 
 const app = express()
+app.use(cors());
+
 const router = express.Router()
 
 app.get('/api/imdb/topgames', async(req, res) => {
