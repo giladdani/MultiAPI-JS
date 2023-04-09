@@ -1,7 +1,11 @@
-const consts = require('./consts')
-const axios = require('axios')
-const express = require('express')
-const cheerio = require('cheerio')
+import express from 'express';
+import axios from 'axios'
+import cheerio from 'cheerio'
+import consts from './consts.js'
+// const consts = require('./consts')
+// const axios = require('axios')
+// const express = require('express')
+// const cheerio = require('cheerio')
 
 const app = express()
 const router = express.Router()
