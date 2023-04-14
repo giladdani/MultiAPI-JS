@@ -1,6 +1,6 @@
 import express from 'express';
 import axios from 'axios'
-import cheerio from 'cheerio'
+import { load } from 'cheerio'
 import consts from './consts.js'
 import cors from 'cors';
 // const consts = require('./consts')
@@ -16,7 +16,7 @@ const router = express.Router()
 app.get('/api/imdb/topgames', async(req, res) => {
     const response = await axios.get(consts.IMDB_TOP_GAMES_LIST_URL)
     const html = response.data
-    const $ = cheerio.load(html)
+    const $ = load(html)
     const topGamesList = []
     $('#main h3.lister-item-header a', html).map((i, elem) => {
         const title = elem.children[0].data
@@ -31,7 +31,7 @@ app.get('/api/imdb/topgames', async(req, res) => {
 app.get('/api/metacritic/topgames', async(req, res) => {
     const response = await axios.get(consts.METACRITIC_TOP_GAMES_LIST_URL)
     const html = response.data
-    const $ = cheerio.load(html)
+    const $ = load(html)
     const topGamesList = []
     $('td.clamp-summary-wrap a h3', html).map((i, elem) => {
         topGamesList.push({
