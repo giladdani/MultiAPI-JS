@@ -9,7 +9,9 @@ import cors from 'cors';
 // const cheerio = require('cheerio')
 
 const app = express()
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 
 // General app settings
 app.use(express.json());  // to support JSON-encoded bodies
