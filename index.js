@@ -11,6 +11,13 @@ import cors from 'cors';
 const app = express()
 app.use(cors());
 
+// General app settings
+app.use(express.json());  // to support JSON-encoded bodies
+app.use(express.urlencoded({ // to support URL-encoded bodies
+		extended: true
+	})
+);
+
 const router = express.Router()
 
 app.get('/api/imdb/topgames', async(req, res) => {

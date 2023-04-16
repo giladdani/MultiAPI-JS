@@ -8,4 +8,4 @@ const consts = Object.freeze({
 //     METACRITIC_TOP_GAMES_LIST_URL: 'https://www.metacritic.com/browse/games/score/metascore/all/all/filtered'
 //});
 
-export default consts
+export default consts;
