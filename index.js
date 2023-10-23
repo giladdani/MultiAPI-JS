@@ -1,10 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import router from './router.js';
-// const consts = require('./consts')
-// const axios = require('axios')
-// const express = require('express')
-// const cheerio = require('cheerio')
 
 const app = express()
 app.use(cors({

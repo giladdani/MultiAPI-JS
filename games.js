@@ -7,7 +7,7 @@ import consts from './consts.js'
 let router = express.Router()
 
 async function get_imdb_top_games(req, res) {
-    const response = await axios.get(consts.IMDB_TOP_GAMES_LIST_URL)
+    const response = await axios.get(consts.IMDB_TOP_GAMES_URL)
     const html = response.data
     const $ = load(html)
     const topGamesList = []
@@ -22,7 +22,7 @@ async function get_imdb_top_games(req, res) {
 }
 
 async function get_metacritic_top_games(req, res) {
-    const response = await axios.get(consts.METACRITIC_TOP_GAMES_LIST_URL)
+    const response = await axios.get(consts.METACRITIC_TOP_GAMES_URL)
     const html = response.data
     const $ = load(html)
     const topGamesList = []
