@@ -4,6 +4,6 @@
 *For now, the API does not require an API key, but will in the future.
 
 ## Supported Endpoints:
-#### /api/movies/imdb/top
-#### /api/games/imdb/top
-#### /api/games/metacritic/top
+#### /api/v1/movies/imdb/top
+#### /api/v1/games/imdb/top
+#### /api/v/1games/metacritic/top
