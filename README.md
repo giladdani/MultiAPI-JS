@@ -6,4 +6,4 @@
 ## Supported Endpoints:
 #### /api/v1/movies/imdb/top
 #### /api/v1/games/imdb/top
-#### /api/v/1games/metacritic/top
+#### /api/v1/games/metacritic/top
